@@ -4,11 +4,11 @@ jobs:
   build:
     runs-on: macos-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - name: Build IPA
         run: |
-          xcodebuild -project HealthKitWriteSteps.xcodeproj \
-            -scheme HealthKitWriteSteps \
+          xcodebuild -project StepsWrite.xcodeproj \
+            -scheme StepsWrite \
             -configuration Release \
             -archivePath build/app.xcarchive \
             archive CODE_SIGN_IDENTITY="" \
